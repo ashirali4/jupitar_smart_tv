@@ -53,6 +53,7 @@ class _HomeState extends State<Home> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
+  final _formKey = GlobalKey<FormState>();
 
   Future<void> sender() async {
     String username = 'itxaxhu663@gmail.com';
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
     // Create our message.
     final message = Message()
       ..from = Address(username, 'Jupitar Smart TV')
-      ..recipients.add('muhammadashirali4@gmail.com')
+      ..recipients.add('jupitersmarttv@gmail.com')
       ..subject = 'Jupiter Check & Payment Submission: ${DateTime.now()}'
       ..text = 'Below are the Customer Name & Invoice Details'
       ..html = "<h1>Invoice Details</h1>\n<p>Name : ${name.text}</p>\n<p>Invoice Number : ${invoicenumber.text}</p>\n<p>Amount : ${amount.text}</p>"
@@ -93,12 +94,11 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
     return Scaffold(
         key: _scaffoldKey,
     appBar: AppBar(
         title: Text(
-          "Jupiter Smart TV check & Payment System",
+          "Jupiter Smart Check Payment System",
           style: GoogleFonts.poppins(
                fontSize: 16,
               fontWeight: FontWeight.bold
@@ -201,7 +201,7 @@ class _HomeState extends State<Home> {
                         hintStyle: GoogleFonts.poppins(
 
                         ),
-                        labelText: 'How much Amount?',
+                        labelText: 'Payment Amount?',
                         labelStyle: GoogleFonts.poppins(
                             color: Colors.white.withOpacity(.7)
                         ),
