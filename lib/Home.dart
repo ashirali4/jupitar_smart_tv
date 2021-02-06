@@ -56,8 +56,8 @@ class _HomeState extends State<Home> {
   final _formKey = GlobalKey<FormState>();
 
   Future<void> sender() async {
-    String username = 'itxaxhu663@gmail.com';
-    String password = 'ALIali123';
+    String username = 'jupitercheck@gmail.com';
+    String password = 'Garyelba';
 
     final smtpServer = gmail(username, password);
     // Use the SmtpServer class to configure an SMTP server:
@@ -287,7 +287,9 @@ class _HomeState extends State<Home> {
                             amount.clear();
                             checkfront="Check Front";
                             checkback="Check Back";
+                            setState(() {
 
+                            });
 
                         }
                       },
